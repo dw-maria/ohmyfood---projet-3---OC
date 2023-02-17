@@ -1,0 +1,36 @@
+@mixin flex_column_mixin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin flex_mixin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin buttons_features{
+    background-color: $color-light-background;
+    border-radius: 30px;
+    transition: all 400ms;
+    display: block;
+}
+
+@mixin grid_mixin{
+  display: grid;
+  grid-template-columns: repeat(3,30%);
+  grid-gap: 5%;
+  @media only screen and (max-width: 992px) {
+    grid-gap: 3%;
+  }
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 100%;
+  }
+}
+
+@mixin box_shadow{
+    box-shadow: 1px 11px 34px 1px rgba(204,191,191,1);
+    -webkit-box-shadow: 1px 11px 34px 1px rgba(204,191,191,1);
+    -moz-box-shadow: 1px 11px 34px 1px rgba(204,191,191,1);
+}

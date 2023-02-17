@@ -1,0 +1,42 @@
+
+.top_banner{
+    width: 100%;
+    .top_banner_inner{
+        text-align: center;
+        background-color: #EAEAEA;
+        height: 70px;
+        @include flex_mixin;
+        @media only screen and (max-width: 992px) {
+        	height: 50px;
+        }
+    }
+    .top_banner_inner i{
+        font-size: $size-small;
+        padding-right: 10px;
+    }
+    .top_banner_inner p{
+        font-size: $size-normal;
+        font-family: $font-title;
+        margin-bottom: 0;
+        @media only screen and (max-width: 992px) {
+          font-size: $size-normal-tb;
+        }
+    }
+    .welcome_banner{
+        height: 60vh;;
+        display: flex;
+        @include flex_column_mixin;
+        text-align: center;
+        background-color: $color-light-background;
+    }
+    .welcome_banner_inner p{
+        font-size: $size-medium;
+        margin-bottom: 50px;
+        @media only screen and (max-width: 992px) {
+        	font-size: $size-medium-tb;
+        }
+        @media only screen and (max-width: 768px) {
+        	font-size: $size-medium-mb;
+        }
+    }
+  }

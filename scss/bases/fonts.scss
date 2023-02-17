@@ -1,0 +1,83 @@
+/* Fonts */
+
+@font-face {
+    font-family: "Shrikhand";
+    src: url("../assets/fonts/Shrikhand/Shrikhand-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Thin";
+    src: url("../assets/fonts/Roboto/Roboto-Thin.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("../assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+
+html {
+	font-size: $size-normal;
+	font-family: var(--font-text);
+}
+
+body {
+	font-size: $size-normal;
+	font-family: $font-text;
+	line-height: normal;
+}
+
+h1 {
+	font-size: $size-very-big;
+	font-family: $font-title;
+}
+
+h2 {
+	font-size: $size-big;
+	font-family: $font-title;
+}
+
+h3 {
+	font-size: $size-medium;
+	font-family: $font-title;
+}
+
+h4 {
+	font-size: $size-normal;
+	font-family: $font-title;
+}
+
+p {
+  font-family: $font-text;
+	font-size: $size-normal;
+}
+
+/* Fonts tablette */
+
+@media screen and (max-width: 992px){
+  h1{
+    font-size: $size-very-big-tb;
+  }
+  h2 {
+  	font-size: $size-big-tb;
+  }
+  h3 {
+  	font-size: $size-medium-tb;
+    margin-bottom: 0.5rem;
+  }
+  p {
+  	font-size: $size-normal-tb;
+  }
+}
+
+@media screen and (max-width: 768px){
+  h1{
+    font-size: $size-very-big-mb;
+  }
+  h2 {
+  	font-size: $size-big-mb;
+  }
+  h3 {
+  	font-size: $size-medium-mb;
+  }
+}
