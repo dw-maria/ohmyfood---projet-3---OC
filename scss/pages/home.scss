@@ -1,4 +1,3 @@
-
 .top_banner{
     width: 100%;
     .top_banner_inner{
@@ -40,3 +39,156 @@
         }
     }
   }
+
+.features{
+    .features_inner h2{
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .features_inner > ul{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap: 30px;
+        @media only screen and (max-width: 992px) {
+          grid-gap: 15px;
+        }
+        @media only screen and (max-width: 768px) {
+          grid-template-columns: 1fr;
+          width: 90%;
+          margin: 0 auto;
+        }
+    }
+    .features_inner > ul > li{
+        position: relative;
+    }
+    .features_inner > ul > li > a{
+        @include buttons_features;
+        @include box_shadow;
+        @include flex_mixin;
+        padding: $padding_features;
+        font-family: $font-title;
+        &:hover{
+          background-color: lighten($color-primary, 35%);
+        }
+        &:hover > i{
+          color: $color-primary;
+        }
+        @media only screen and (max-width: 890px) {
+          padding: $padding_features_tb;
+        }
+    }
+    .features_inner > ul > li > a > p{
+      font-family: $font-title;
+      font-size: $size-normal;
+      margin-bottom: 0;
+      @media only screen and (max-width: 992px) {
+        font-size: $size-normal-tb;
+      }
+    }
+    .features_inner > ul > li > a > span{
+        background-color: $color-primary;
+        border-radius: 100%;
+        padding: 12px 15px;
+        font-size: 0.8rem;
+        position: absolute;
+        left: -18px;
+        top: 30px;
+        color: white;
+        @media only screen and (max-width: 1170px) {
+          left: 45%;
+          top: -23px;
+        }
+        @media only screen and (max-width: 768px) {
+          left: -18px;
+          top: 30px;
+        }
+    }
+    .features_inner > ul > li > a > i{
+        color: $color-text;
+        padding-right: 20px;
+        transition: all 400ms;
+    }
+}
+
+.restaurants{
+    background-color: $color-light-background;
+    h2{
+        text-align: center;
+        padding-top: 100px;
+        @media only screen and (max-width: 992px) {
+          padding-top: 50px;
+        }
+    }
+    .restaurants_inner{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 100px;
+        @media only screen and (max-width: 992px) {
+          grid-gap: 20px;
+        }
+        @media only screen and (max-width: 768px) {
+          grid-template-columns: 1fr;
+          width: 90%;
+          margin: 0 auto;
+        }
+    }
+    .restaurant_article{
+        width: 100%;
+        @include box-shadow;
+        border-radius: 50px;
+        position: relative;
+    }
+    .restaurant_article img{
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50px 50px 0 0;
+        @media only screen and (max-width: 992px) {
+          height: 220px;
+        }
+
+    }
+    .restaurant_article > span{
+        background-color: $color-tertiary;
+        padding: 10px 20px;
+        font-family: $font-title;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        border-radius: 5px;
+        color: darken($color-tertiary, 40%);
+        font-size: $size-normal;
+        @media only screen and (max-width: 992px) {
+          font-size: $size-normal-tb;
+        }
+    }
+    .article_content{
+        padding: 20px;
+        @include flex_mixin;
+        justify-content: space-between;
+        @media only screen and (max-width: 992px) {
+          padding: 10px 30px;
+        }
+    }
+    span.like_heart{
+      position: relative;
+    }
+    i.heart_empty, i.heart_full{
+      font-size: $size-medium;
+      position: absolute;
+      top: -25px;
+      right: 10px;
+    }
+    i.heart_full{
+      opacity: 0;
+      transition: all 300ms;
+      &:hover{
+        opacity: 1;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-image: linear-gradient(185deg, $color-secondary, $color-primary);
+      }
+    }
+}

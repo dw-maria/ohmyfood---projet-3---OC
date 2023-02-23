@@ -1,0 +1,27 @@
+/* Buttons */
+
+.btn_rose{
+    color: white;
+    padding: 10px 20px;
+    background: linear-gradient(185deg, $color-secondary, $color-primary);
+    border-radius: 50px;
+    font-family: $font-title;
+    font-size: 1rem;
+    transition: all 450ms;
+    &:hover{
+      filter: brightness(120%);
+    }
+}
+
+.btn_larger{
+    padding: 20px 60px;
+    font-size: 1.2rem;
+    margin-top: 50px;
+}
+
+@media only screen and (max-width: 992px) {
+  .btn_larger{
+    padding: 15px 50px;
+    margin-top: 30px;
+  }
+}
