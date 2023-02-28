@@ -1,0 +1,24 @@
+.animation{
+  animation: animation_menus 3s both;
+  /*opacity: 0;*/
+}
+
+$dl : 0;
+@for $i from 1 through 10 {
+    .menu_#{$i} {
+        animation-delay: #{$dl}ms;
+    }
+    $dl: $dl+500;
+}
+
+@keyframes animation_menus {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

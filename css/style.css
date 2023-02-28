@@ -4,6 +4,61 @@
 /* Fonts tablette */
 /* Fonts mobile */
 /* Padding */
+.animation {
+  animation: animation_menus 3s both;
+  /*opacity: 0;*/
+}
+
+.menu_1 {
+  animation-delay: 0ms;
+}
+
+.menu_2 {
+  animation-delay: 500ms;
+}
+
+.menu_3 {
+  animation-delay: 1000ms;
+}
+
+.menu_4 {
+  animation-delay: 1500ms;
+}
+
+.menu_5 {
+  animation-delay: 2000ms;
+}
+
+.menu_6 {
+  animation-delay: 2500ms;
+}
+
+.menu_7 {
+  animation-delay: 3000ms;
+}
+
+.menu_8 {
+  animation-delay: 3500ms;
+}
+
+.menu_9 {
+  animation-delay: 4000ms;
+}
+
+.menu_10 {
+  animation-delay: 4500ms;
+}
+
+@keyframes animation_menus {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 /* Reset HTML */
 body,
 html {
